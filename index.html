@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhan Arvie Web Development Services</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0056b3',
+                        secondary: '#e6f3ff'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="#" class="logo text-primary text-2xl font-bold tracking-wider">Web4Service</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#portfolio" class="text-gray-700 hover:text-primary font-medium">Portfolio</a>
+                <a href="#pricing" class="text-gray-700 hover:text-primary font-medium">Pricing</a>
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium">About Me</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden md:block bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90 transition">Message Me!</a>
+                <button id="menuBtn" class="md:hidden text-gray-700 hover:text-primary">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div id="mobileNav" class="mobile-nav">
+        <div class="flex justify-between items-center mb-8">
+            <a href="#" class="logo text-primary text-xl font-bold tracking-wider">Web4Service</a>
+            <button id="closeMenuBtn" class="text-gray-700 hover:text-primary">
+                <i class="ri-close-line text-2xl"></i>
+            </button>
+        </div>
+        <div class="flex flex-col space-y-6">
+            <a href="#portfolio" class="text-gray-700 hover:text-primary font-medium">Portfolio</a>
+            <a href="#pricing" class="text-gray-700 hover:text-primary font-medium">Pricing</a>
+            <a href="#about" class="text-gray-700 hover:text-primary font-medium">About Me</a>
+            <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+            <a href="#contact" class="bg-primary text-white px-4 py-2 !rounded-button text-center whitespace-nowrap hover:bg-primary/90 transition">Message Me!</a>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div style="background-image: url('https://readdy.ai/api/search-image?query=modern%20professional%20web%20development%20workspace%20with%20blue%20theme%2C%20showing%20a%20laptop%2C%20coffee%20cup%2C%20and%20small%20business%20elements%20like%20a%20menu%20card%20and%20business%20card%2C%20clean%20organized%20desk%20with%20soft%20lighting%2C%20high%20quality%20professional%20photo&width=1920&height=800&seq=1&orientation=landscape'); background-size: cover; background-position: center;" class="absolute inset-0 opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+        <div class="container mx-auto px-4 md:px-8 py-16 md:py-24 relative">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Affordable One-Page Websites for Filipino Small Businesses!</h1>
+                    <p class="text-xl md:text-2xl text-gray-700 mb-6">Pwede na ang website mo in 5 days!</p>
+                    <p class="text-lg text-gray-600 mb-8">Para sa mga negosyanteng gustong mag-level up online! Mura, mabilis, at effective para sa iyong business.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition text-lg font-medium">Message Me!</a>
+                        <a href="#pricing" class="bg-white border-2 border-primary text-primary px-6 py-3 !rounded-button whitespace-nowrap hover:bg-secondary transition text-lg font-medium">View Pricing</a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="bg-white p-6 rounded-xl shadow-lg max-w-md">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+                                <img src="assets/jhan arvie.jpg" alt="Jhan Arvie" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Jhan Arvie</h3>
+                                <p class="text-gray-600">Front-End Developer</p>
+                                <p class="text-gray-500 text-sm">Based in Bulacan</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">"Ako ang makakatulong sa'yo para magkaroon ng professional na online presence ang iyong business sa abot-kayang presyo!"</p>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 flex items-center justify-center text-gray-300">
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center text-gray-300">
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center text-gray-300">
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center text-gray-300">
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center text-gray-300">
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <span class="text-primary text-sm ml-2 font-medium">Be my first client and leave a review! 🌟</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Target Clients Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Who Can I Help?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Perfect for small businesses na gustong magkaroon ng professional online presence!</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="ri-restaurant-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-3">Restaurants & Cafés</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Digital menu display</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Location & business hours</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Online reservations</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="ri-tools-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-3">Service Providers</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Plumbers & Electricians</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Dental Clinics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Service booking system</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="ri-car-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-3">Auto Services</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Car Wash Services</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Vulcanizing Shops</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Auto Repair Shops</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="ri-user-star-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-3">Professionals</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Private Tutors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Freelancers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3">Professional Services</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <div class="inline-flex items-center p-1 bg-red-50 rounded-lg border border-red-100">
+                    <div class="w-5 h-5 flex items-center justify-center mr-2">
+                        <i class="ri-information-line"></i>
+                    </div>
+                    <span class="text-red-600 text-sm font-medium">Note: We don't offer eCommerce website development at this time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Be My First Projects Section -->
+    <section id="portfolio" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Be My First Projects!</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Special perks and lowest rates for my first clients! Let's build your website together.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="ri-price-tag-3-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">Lowest Rates</h3>
+                    <p class="text-gray-600 text-center mb-6">Get the best pricing as one of my first clients! Help me build my portfolio while getting a professional website at a special rate.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-700">Special introductory pricing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-700">Priority support & updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-700">Featured in my portfolio</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="ri-edit-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">Free Minor Tweaks</h3>
+                    <p class="text-gray-600 text-center mb-6">As one of my first 3 clients, you'll get free minor design tweaks and content updates for the first month!</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-700">Free content updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-700">Design adjustments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-700">Quick response time</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="ri-customer-service-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">Extra Support</h3>
+                    <p class="text-gray-600 text-center mb-6">Get personalized attention and guidance throughout the website development process!</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-700">Direct communication</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-700">Website setup guidance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-700">Content optimization tips</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <div class="bg-red-50 border border-red-100 rounded-lg p-4 max-w-2xl mx-auto mb-8">
+                    <p class="text-red-600 text-sm font-medium flex items-center justify-center">
+                    <div class="w-5 h-5 flex items-center justify-center mr-2">
+                        <i class="ri-alarm-warning-fill"></i>
+                    </div> Limited time offer! Only accepting 3 clients at these special rates. </p>
+                </div>
+                <a href="#contact" class="inline-block bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition text-lg font-medium">Be One of My First Clients!</a>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Affordable Pricing Plans</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Choose the perfect plan para sa iyong business needs!</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 transition-transform hover:shadow-lg">
+                    <div class="p-6 bg-gray-50 border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-gray-900">Basic Plan</h3>
+                        <div class="mt-4 flex items-baseline">
+                            <span class="text-4xl font-extrabold text-gray-900">₱300</span>
+                            <span class="text-xl text-gray-500 ml-1">/month</span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Perfect para sa mga small business na nagstart pa lang!</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Pre-built template design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Free subdomain (yourbusiness.myplatform.com)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Mobile-friendly, one-page website</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Basic SEO setup</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Contact form integration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Hosting included</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="#contact" class="block w-full bg-primary text-white text-center px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition">Avail Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-primary relative transition-transform hover:shadow-xl">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm font-semibold">Best Value</div>
+                    <div class="p-6 bg-primary/10 border-b border-primary/20">
+                        <h3 class="text-2xl font-bold text-gray-900">Standard Plan</h3>
+                        <div class="mt-4 flex items-baseline">
+                            <span class="text-4xl font-extrabold text-gray-900">₱500</span>
+                            <span class="text-xl text-gray-500 ml-1">/month</span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Recommended para sa mga business na gustong professional look!</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-3 mb-6">
+                            <p class="text-red-600 text-sm font-medium flex items-center">
+                            <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center mr-1">
+                                <i class="ri-alarm-warning-fill"></i>
+                            </div> Limited slots only! Message now to secure your spot! </p>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Custom domain (yourbusiness.com) (+domain fee)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Minor customizations (colors, text, layout)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Mobile-friendly, one-page website</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Advanced SEO optimization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Social media integration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <span class="ml-3 text-gray-700">Hosting included</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="#contact" class="block w-full bg-primary text-white text-center px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition">Avail Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Me Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Hi! I'm Jhan Arvie</h2>
+                    <p class="text-gray-700 mb-4">Isang Front-End Developer na based sa Bulacan, Philippines. Currently studying web development at the same time helping small businesses establish their online presence.</p>
+                    <p class="text-gray-700 mb-4">Naniniwala ako na every business, kahit maliit, deserves to have a professional website na affordable. Kaya ko nag-offer ng services na ito - para tulungan ang mga local businesses na mag-grow online with affordable price.</p>
+                    <div class="space-y-4 mt-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="ri-code-s-slash-line"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Front-End Development</h3>
+                                <p class="text-gray-600">Creating responsive, mobile-friendly websites using modern technologies.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="ri-layout-line"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">UI/UX Design</h3>
+                                <p class="text-gray-600">Designing user-friendly interfaces that look professional and convert visitors.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="ri-customer-service-2-line"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-gray-900">Customer Support</h3>
+                                <p class="text-gray-600">Providing ongoing support and maintenance for your website.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="relative w-[400px]">
+                        <div class="absolute inset-0 bg-primary rounded-full opacity-10 transform translate-x-3 translate-y-3"></div>
+                        <img src="assets/professional image.jpg" alt="Jhan Arvie" class="rounded-lg shadow-lg relative z-10 w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Let's Work Together!</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Ready na ba for your own website? Message me now para masimulan na natin!</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Juan Dela Cruz">
+                        </div>
+                        <div>
+                            <label for="business" class="block text-gray-700 font-medium mb-2">Business Type</label>
+                            <div class="relative">
+                                <select id="business" name="business" class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:border-primary focus:ring-1 focus:ring-primary pr-8">
+                                    <option value="" disabled selected>Select your business type</option>
+                                    <option value="restaurant">Restaurant/Café</option>
+                                    <option value="service">Service Provider</option>
+                                    <option value="auto">Auto Shop</option>
+                                    <option value="retail">Retail Store</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none w-5 h-5 flex items-center justify-center text-gray-500">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Contact Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="09XX XXX XXXX">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="juandelacruz@example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Tell me about your business and website needs..."></textarea>
+                        </div>
+                        <div class="flex items-center">
+                            <label class="custom-checkbox pl-7 text-gray-700">
+                                <input type="checkbox" checked>
+                                <span class="checkmark"></span> I agree to receive updates about my website project </label>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition font-medium">Send Message</button>
+                    </form>
+                </div>
+                <div>
+                    <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                    <i class="ri-mail-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Email</h4>
+                                    <a href="mailto:jhanboniel@gmail.com" class="text-gray-600 hover:text-primary">jhanboniel@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                    <i class="ri-phone-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Phone</h4>
+                                    <a href="tel:+639524739116" class="text-gray-600 hover:text-primary">+63 952 473 9116</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Frequently Asked Questions</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-gray-900 font-medium mb-2">Gaano katagal bago makumpleto ang website?</h4>
+                                <p class="text-gray-600">Usually within 5-7 days after receiving all your content and requirements.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-900 font-medium mb-2">Kasama na ba ang hosting sa monthly fee?</h4>
+                                <p class="text-gray-600">Yes! Kasama na ang hosting sa monthly fee. No need to pay for separate hosting.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-900 font-medium mb-2">What about future website changes?</h4>
+                                <p class="text-gray-600">For future major website enhancements or significant changes, we'll discuss and agree on any additional costs based on the scope of work needed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-12 bg-primary">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Ready to Take Your Business Online?</h2>
+            <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">Limited slots available for the ₱500/month Standard Plan! Secure your spot now!</p>
+            <a href="#contact" class="inline-block bg-white text-primary px-8 py-3 !rounded-button whitespace-nowrap hover:bg-gray-100 transition font-medium text-lg">Message Me Today!</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <a href="#" class="logo text-white text-2xl font-bold tracking-wider">Web4Service</a>
+                    <p class="mt-4 text-gray-400">Providing affordable and professional website solutions for small businesses in the Philippines.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-messenger-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Me</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Me</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-400">jhanboniel@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-400">+63 952 473 9116</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="ml-3 text-gray-400">Bulacan, Philippines</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 WebDev ni Jhan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
