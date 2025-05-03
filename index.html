@@ -540,11 +540,36 @@
                             <div class="relative">
                                 <select id="business" name="business" class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:border-primary focus:ring-1 focus:ring-primary pr-8">
                                     <option value="" disabled selected>Select your business type</option>
-                                    <option value="restaurant">Restaurant/Café</option>
-                                    <option value="service">Service Provider</option>
-                                    <option value="auto">Auto Shop</option>
-                                    <option value="retail">Retail Store</option>
-                                    <option value="other">Other</option>
+                                    <optgroup label="Food & Beverage">
+                                        <option value="restaurant">Restaurant</option>
+                                        <option value="cafe">Café</option>
+                                        <option value="foodcart">Food Cart/Stall</option>
+                                        <option value="catering">Catering Service</option>
+                                    </optgroup>
+                                    <optgroup label="Professional Services">
+                                        <option value="dental">Dental Clinic</option>
+                                        <option value="salon">Beauty Salon/Spa</option>
+                                        <option value="fitness">Fitness/Gym</option>
+                                        <option value="tutor">Tutorial Services</option>
+                                        <option value="legal">Legal Services</option>
+                                        <option value="accounting">Accounting Services</option>
+                                        <option value="consultant">Business Consultant</option>
+                                        <option value="realtor">Real Estate Agent</option>
+                                    </optgroup>
+                                    <optgroup label="Technical Services">
+                                        <option value="auto">Auto Repair Shop</option>
+                                        <option value="carwash">Car Wash</option>
+                                        <option value="plumbing">Plumbing Services</option>
+                                        <option value="electrical">Electrical Services</option>
+                                        <option value="aircon">Aircon Services</option>
+                                        <option value="cleaning">Cleaning Services</option>
+                                    </optgroup>
+                                    <optgroup label="Other Services">
+                                        <option value="events">Event Planning</option>
+                                        <option value="photo">Photography/Videography</option>
+                                        <option value="travel">Travel Agency</option>
+                                        <option value="other">Other Service-Based Business</option>
+                                    </optgroup>
                                 </select>
                                 <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none w-5 h-5 flex items-center justify-center text-gray-500">
                                     <i class="ri-arrow-down-s-line"></i>
